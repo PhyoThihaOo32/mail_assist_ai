@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Mail Assistant Lite",
+  "description": "Generate reply drafts in Gmail and Outlook, then let users edit/send. Includes Apple Calendar .ics event drafts.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://outlook.office.com/*",
+    "https://outlook.live.com/*",
+    "https://api.openai.com/*",
+    "http://localhost:8787/*",
+    "http://127.0.0.1:8787/*",
+    "https://*.onrender.com/*",
+    "https://*.up.railway.app/*",
+    "https://*.fly.dev/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content/common.js", "content/gmail.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://outlook.office.com/*",
+        "https://outlook.live.com/*"
+      ],
+      "js": ["content/common.js", "content/outlook.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}

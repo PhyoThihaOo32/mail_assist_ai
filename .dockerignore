@@ -1,0 +1,10 @@
+.git
+.gitignore
+.DS_Store
+dist
+release
+scripts
+extension
+backend/.env
+backend/.env.local
+

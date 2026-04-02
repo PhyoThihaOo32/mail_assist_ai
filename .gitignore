@@ -1,0 +1,6 @@
+# Secrets
+backend/.env
+backend/.env.local
+
+# macOS
+.DS_Store

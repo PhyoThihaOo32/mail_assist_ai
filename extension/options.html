@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mail Assistant Lite Settings</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 24px;
+        color: #0f172a;
+        max-width: 760px;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 8px;
+      }
+      p {
+        color: #334155;
+        margin: 0 0 16px;
+      }
+      .field {
+        margin-bottom: 14px;
+      }
+      label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 14px;
+      }
+      .hint {
+        margin-top: 6px;
+        color: #64748b;
+        font-size: 12px;
+      }
+      .actions {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+      }
+      button {
+        border: 1px solid #cbd5e1;
+        background: #0f172a;
+        color: #fff;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      button.secondary {
+        background: #fff;
+        color: #0f172a;
+      }
+      #status {
+        margin-top: 12px;
+        font-size: 13px;
+        color: #0f766e;
+        min-height: 18px;
+      }
+      code {
+        background: #f1f5f9;
+        padding: 1px 4px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mail Assistant Lite Settings</h1>
+    <p>
+      Configure either a backend URL (recommended) or an OpenAI API key for direct extension calls.
+    </p>
+
+    <div class="field">
+      <label for="backendUrl">Backend URL</label>
+      <input id="backendUrl" type="url" placeholder="http://localhost:8787" />
+      <div class="hint">If set, draft/event generation goes through your backend endpoints.</div>
+    </div>
+
+    <div class="field">
+      <label for="backendAuthKey">Backend Auth Key (recommended for cloud)</label>
+      <input id="backendAuthKey" type="password" placeholder="long-random-secret" autocomplete="off" />
+      <div class="hint">
+        Optional shared secret sent as <code>X-Extension-Key</code>. Must match backend <code>EXTENSION_API_KEY</code>.
+        You can paste either just the key or a full line like <code>EXTENSION_API_KEY=...</code>.
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="openaiApiKey">OpenAI API Key</label>
+      <input id="openaiApiKey" type="password" placeholder="sk-..." autocomplete="off" />
+      <div class="hint">Used only when Backend URL is empty.</div>
+    </div>
+
+    <div class="field">
+      <label for="model">Model</label>
+      <input id="model" type="text" placeholder="gpt-4.1-mini" />
+      <div class="hint">Low-cost default: <code>gpt-4.1-mini</code>.</div>
+    </div>
+
+    <div class="field">
+      <label for="temperature">Temperature</label>
+      <input id="temperature" type="number" min="0" max="1" step="0.1" placeholder="0.2" />
+      <div class="hint">Use 0.1-0.3 for consistent business replies.</div>
+    </div>
+
+    <div class="actions">
+      <button id="save" type="button">Save</button>
+      <button id="reset" type="button" class="secondary">Reset Defaults</button>
+    </div>
+
+    <div id="status"></div>
+
+    <script src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mail Assistant Lite</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 12px;
+        width: 280px;
+        color: #111827;
+      }
+      h1 {
+        font-size: 14px;
+        margin: 0 0 8px;
+      }
+      p {
+        font-size: 12px;
+        margin: 0 0 8px;
+        color: #374151;
+      }
+      .status {
+        font-size: 11px;
+        padding: 8px;
+        background: #f3f4f6;
+        border-radius: 6px;
+        margin-bottom: 10px;
+      }
+      button {
+        border: 1px solid #cbd5e1;
+        background: #0f172a;
+        color: #fff;
+        border-radius: 7px;
+        padding: 8px 10px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mail Assistant Lite</h1>
+    <p>Use the floating <b>AI Draft</b> button inside Gmail/Outlook.</p>
+    <div id="status" class="status">Checking configuration...</div>
+    <button id="open-options" type="button">Open Settings</button>
+    <script src="popup.js"></script>
+  </body>
+</html>
