@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mail Assistant Lite
 
 Lightweight browser extension MVP for:
@@ -108,3 +109,7 @@ Then follow:
 2. Microsoft Graph OAuth + `createReply`/`createReplyAll` draft flow.
 3. CalDAV connector for direct iCloud calendar event creation.
 4. Team templates, tone presets, and reply QA rules.
+=======
+# mail_assist_ai
+Mail Assistant Lite is an AI-driven email assistant built with a backend API and browser extension. It leverages OpenAI models to generate context-aware replies, supporting secure API communication, environment-based configuration, and Docker deployment.
+>>>>>>> 819336b5cbd9b18e735fd32e06fa8c50f8dc405e
