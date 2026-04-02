@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Mail Assistant Lite
 
 Lightweight browser extension MVP for:
