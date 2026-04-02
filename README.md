@@ -112,4 +112,4 @@ Then follow:
 =======
 # mail_assist_ai
 Mail Assistant Lite is an AI-driven email assistant built with a backend API and browser extension. It leverages OpenAI models to generate context-aware replies, supporting secure API communication, environment-based configuration, and Docker deployment.
->>>>>>> 819336b5cbd9b18e735fd32e06fa8c50f8dc405e
+
