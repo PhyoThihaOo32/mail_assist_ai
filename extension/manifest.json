@@ -10,6 +10,13 @@
   "host_permissions": [
     "https://mail.google.com/*",
     "https://outlook.office.com/*",
+    "https://*.outlook.office.com/*",
+    "https://outlook.office365.com/*",
+    "https://*.outlook.office365.com/*",
+    "https://outlook.office365.us/*",
+    "https://*.outlook.office365.us/*",
+    "https://outlook.cloud.microsoft/*",
+    "https://*.outlook.cloud.microsoft/*",
     "https://outlook.live.com/*",
     "https://api.openai.com/*",
     "http://localhost:8787/*",
@@ -30,6 +37,13 @@
     {
       "matches": [
         "https://outlook.office.com/*",
+        "https://*.outlook.office.com/*",
+        "https://outlook.office365.com/*",
+        "https://*.outlook.office365.com/*",
+        "https://outlook.office365.us/*",
+        "https://*.outlook.office365.us/*",
+        "https://outlook.cloud.microsoft/*",
+        "https://*.outlook.cloud.microsoft/*",
         "https://outlook.live.com/*"
       ],
       "js": ["content/common.js", "content/outlook.js"],

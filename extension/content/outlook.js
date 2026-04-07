@@ -78,4 +78,17 @@
     childList: true,
     subtree: true
   });
+
+  const intervalId = window.setInterval(() => {
+    tryInit();
+  }, 1500);
+
+  window.addEventListener(
+    "pagehide",
+    () => {
+      observer.disconnect();
+      window.clearInterval(intervalId);
+    },
+    { once: true }
+  );
 })();
